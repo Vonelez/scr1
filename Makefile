@@ -111,22 +111,22 @@ $(test_info): clean_hex tests
 	ls -tr *.hex > $@
 
 vectored_isr_sample: | $(bld_dir)
-	$(MAKE) -C $(tst_dir)/vectored_isr_sample ARCH=$(ARCH)
+#	$(MAKE) -C $(tst_dir)/vectored_isr_sample ARCH=$(ARCH)
 
 dhrystone21: | $(bld_dir)
-	$(MAKE) -C $(tst_dir)/benchmarks/dhrystone21 EXT_CFLAGS="$(EXT_CFLAGS)" ARCH=$(ARCH)
+#	$(MAKE) -C $(tst_dir)/benchmarks/dhrystone21 EXT_CFLAGS="$(EXT_CFLAGS)" ARCH=$(ARCH)
 
 coremark: | $(bld_dir)
-	-$(MAKE) -C $(tst_dir)/benchmarks/coremark EXT_CFLAGS="$(EXT_CFLAGS)" ARCH=$(ARCH)
+#	-$(MAKE) -C $(tst_dir)/benchmarks/coremark EXT_CFLAGS="$(EXT_CFLAGS)" ARCH=$(ARCH)
 
 riscv_isa: | $(bld_dir)
 	$(MAKE) -C $(tst_dir)/riscv_isa ARCH=$(ARCH)
 
 riscv_compliance: | $(bld_dir)
-	$(MAKE) -C $(tst_dir)/riscv_compliance ARCH=$(ARCH)
+#	$(MAKE) -C $(tst_dir)/riscv_compliance ARCH=$(ARCH)
 
 hello: | $(bld_dir)
-	-$(MAKE) -C $(tst_dir)/hello EXT_CFLAGS="$(EXT_CFLAGS)" ARCH=$(ARCH)
+#	-$(MAKE) -C $(tst_dir)/hello EXT_CFLAGS="$(EXT_CFLAGS)" ARCH=$(ARCH)
 
 clean_hex: | $(bld_dir)
 	$(RM) $(bld_dir)/*.hex

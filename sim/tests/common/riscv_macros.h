@@ -180,6 +180,7 @@ _run_test:
         fence;                                                          \
         mv a1, TESTNUM;                                                 \
         li  a0, 0x0;                                                    \
+        message db 'success', 0xa;                                    \
         ecall
 
 #define TESTNUM x28
@@ -187,6 +188,7 @@ _run_test:
         fence;                                                          \
         mv a1, TESTNUM;                                                 \
         li  a0, 0x1;                                                    \
+        message db 'fail', 0xa;                                         \
         ecall
 
 //-----------------------------------------------------------------------
